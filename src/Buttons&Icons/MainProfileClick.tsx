@@ -12,8 +12,8 @@ const MainProfileClick: React.FC<MainProfileClick> = ({ onClick }) => {
         backgroundColor: "#4e7f7f", // base teal color
         border: "2px solid #004d4d", // dark edge border
         borderRadius: "50%",
-        width: "100px",
-        height: "100px",
+        width: "175px",
+        height: "175px",
         cursor: "pointer",
         position: "relative",
         outline: "none",
