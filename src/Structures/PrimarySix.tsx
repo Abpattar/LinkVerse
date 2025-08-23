@@ -24,7 +24,7 @@ const buttonComponents = [
 ];
 
 const PrimarySix: React.FC = () => {
-  const angleOffset = Primary6Circular(0.2); // 0.2 degrees per frame speed
+  const angleOffset = Primary6Circular(-0.1); // 0.1 degrees per frame speed
 
   return (
     <div
@@ -67,7 +67,7 @@ const PrimarySix: React.FC = () => {
               top: `calc(50% + ${y}px)`,
               transform: "translate(-50%, -50%)",
               zIndex: 1,
-              transition: "left 0.1s linear, top 0.1s linear",
+              transition: "None",
             }}
           >
             {Btn}
