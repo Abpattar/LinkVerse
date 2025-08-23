@@ -1,5 +1,5 @@
 // import Background from "./background";
-import MainProfileClick from "./Buttons&Icons/MainProfileClick";
+import PrimarySix from "./Structures/PrimarySix";
 
 function App() {
   const style = {
@@ -12,7 +12,7 @@ function App() {
   return (
     <div style={style}>
       {/* <Background /> */}
-      <MainProfileClick />
+      <PrimarySix />
     </div>
   );
 }
