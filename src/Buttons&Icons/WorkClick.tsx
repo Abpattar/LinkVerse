@@ -12,8 +12,8 @@ const WorkClick: React.FC<WorkClick> = ({ onClick }) => {
         backgroundColor: "#4e7f7f", // base teal color
         border: "2px solid #004d4d", // dark edge border
         borderRadius: "50%",
-        width: "125px",
-        height: "125px",
+  width: "150px",
+  height: "150px",
         cursor: "pointer",
         position: "relative",
         outline: "none",

@@ -9,7 +9,7 @@ import MainProfileClick from "../Buttons&Icons/MainProfileClick";
 import OthersClick from "../Buttons&Icons/OthersClick";
 
 const CIRCLE_RADIUS = 250; // Distance from center in px
-const BUTTON_SIZE = 150;    // px, must match each button's width/height
+const BUTTON_SIZE = 150;    // px, must match each surrounding button's width/height
 
 const angles = [0, 72, 144, 216, 288]; // in degrees for 5 buttons
 
@@ -37,8 +37,9 @@ const PrimarySix: React.FC = () => (
     <div
       style={{
         position: "absolute",
-        left: `calc(50% - ${BUTTON_SIZE / 2}px)`,
-        top: `calc(50% - ${BUTTON_SIZE / 2}px)`,
+        left: "50%",
+        top: "50%",
+        transform: "translate(-50%, -50%)",
         zIndex: 2
       }}
     >
@@ -46,7 +47,7 @@ const PrimarySix: React.FC = () => (
     </div>
 
     {/* Surrounding Buttons */}
-    {buttonComponents.map((Btn, i) => {
+  {buttonComponents.map((Btn, i) => {
       const angleRad = (angles[i] * Math.PI) / 180;
       const x = CIRCLE_RADIUS * Math.cos(angleRad);
       const y = CIRCLE_RADIUS * Math.sin(angleRad);
@@ -56,8 +57,9 @@ const PrimarySix: React.FC = () => (
           key={i}
           style={{
             position: "absolute",
-            left: `calc(50% - ${BUTTON_SIZE / 2}px + ${x}px)`,
-            top: `calc(50% - ${BUTTON_SIZE / 2}px + ${y}px)`,
+      left: `calc(50% + ${x}px)`,
+      top: `calc(50% + ${y}px)`,
+      transform: "translate(-50%, -50%)",
             zIndex: 1
           }}
         >
