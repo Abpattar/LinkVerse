@@ -8,10 +8,12 @@ import CommunityClick from "../Buttons&Icons/CommunityClick";
 import MainProfileClick from "../Buttons&Icons/MainProfileClick";
 import OthersClick from "../Buttons&Icons/OthersClick";
 
-const CIRCLE_RADIUS = 250; // Distance from center in px
-const BUTTON_SIZE = 150;    // px, must match each surrounding button's width/height
+import { Primary6Circular } from "../Animations/Primary6Circular";
 
-const angles = [0, 72, 144, 216, 288]; // in degrees for 5 buttons
+const CIRCLE_RADIUS = 250;
+const BUTTON_SIZE = 150;
+
+const angles = [0, 72, 144, 216, 288];
 
 const buttonComponents = [
   <FamilyClick key="family" />,
@@ -21,53 +23,59 @@ const buttonComponents = [
   <OthersClick key="other" />,
 ];
 
-const PrimarySix: React.FC = () => (
-  <div
-    style={{
-      position: "relative",
-      width: `${CIRCLE_RADIUS * 2 + BUTTON_SIZE}px`,
-      height: `${CIRCLE_RADIUS * 2 + BUTTON_SIZE}px`,
-      margin: "0 auto",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center"
-    }}
-  >
-    {/* Center Neon Button */}
+const PrimarySix: React.FC = () => {
+  const angleOffset = Primary6Circular(0.2); // 0.2 degrees per frame speed
+
+  return (
     <div
       style={{
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        transform: "translate(-50%, -50%)",
-        zIndex: 2
+        position: "relative",
+        width: `${CIRCLE_RADIUS * 2 + BUTTON_SIZE}px`,
+        height: `${CIRCLE_RADIUS * 2 + BUTTON_SIZE}px`,
+        margin: "0 auto",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      <MainProfileClick />
+      {/* Center Button */}
+      <div
+        style={{
+          position: "absolute",
+          left: "50%",
+          top: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: 2,
+        }}
+      >
+        <MainProfileClick />
+      </div>
+
+      {/* Moving Buttons */}
+      {buttonComponents.map((Btn, i) => {
+        const animatedAngle = (angles[i] + angleOffset) % 360;
+        const angleRad = (animatedAngle * Math.PI) / 180;
+        const x = CIRCLE_RADIUS * Math.cos(angleRad);
+        const y = CIRCLE_RADIUS * Math.sin(angleRad);
+
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: `calc(50% + ${x}px)`,
+              top: `calc(50% + ${y}px)`,
+              transform: "translate(-50%, -50%)",
+              zIndex: 1,
+              transition: "left 0.1s linear, top 0.1s linear",
+            }}
+          >
+            {Btn}
+          </div>
+        );
+      })}
     </div>
-
-    {/* Surrounding Buttons */}
-  {buttonComponents.map((Btn, i) => {
-      const angleRad = (angles[i] * Math.PI) / 180;
-      const x = CIRCLE_RADIUS * Math.cos(angleRad);
-      const y = CIRCLE_RADIUS * Math.sin(angleRad);
-
-      return (
-        <div
-          key={i}
-          style={{
-            position: "absolute",
-      left: `calc(50% + ${x}px)`,
-      top: `calc(50% + ${y}px)`,
-      transform: "translate(-50%, -50%)",
-            zIndex: 1
-          }}
-        >
-          {Btn}
-        </div>
-      );
-    })}
-  </div>
-);
+  );
+};
 
 export default PrimarySix;
