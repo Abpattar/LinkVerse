@@ -1,10 +1,10 @@
 import React from "react";
 
-interface MainProfileClick{
+interface FamilyClick{
   onClick?: () => void;
 }
 
-const MainProfileClick: React.FC<MainProfileClick> = ({ onClick }) => {
+const FamilyClick: React.FC<FamilyClick> = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
@@ -12,8 +12,8 @@ const MainProfileClick: React.FC<MainProfileClick> = ({ onClick }) => {
         backgroundColor: "#4e7f7f", // base teal color
         border: "2px solid #004d4d", // dark edge border
         borderRadius: "50%",
-  width: "200px",
-  height: "200px",
+  width: "150px",
+  height: "150px",
         cursor: "pointer",
         position: "relative",
         outline: "none",
@@ -42,4 +42,4 @@ const MainProfileClick: React.FC<MainProfileClick> = ({ onClick }) => {
   );
 };
 
-export default MainProfileClick;
+export default FamilyClick;
