@@ -1,5 +1,7 @@
 // import Background from "./background";
 import PrimarySix from "./Structures/PrimarySix";
+import TopIcons from "./Structures/TopIcons";
+import SearchBar from "./Structures/SearchBar";
 
 function App() {
   const style = {
@@ -13,6 +15,8 @@ function App() {
     <div style={style}>
       {/* <Background /> */}
       <PrimarySix />
+      <TopIcons />
+      <SearchBar />
     </div>
   );
 }
