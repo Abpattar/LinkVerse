@@ -17,6 +17,7 @@ function App() {
       <PrimarySix />
       <TopIcons />
       <SearchBar />
+  {/* Profile dropdown is integrated in ProfileIcon inside TopIcons */}
     </div>
   );
 }
