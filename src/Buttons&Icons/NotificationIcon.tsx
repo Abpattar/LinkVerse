@@ -8,9 +8,6 @@ const NotificationIcon: React.FC<NotificationIcon> = ({ onClick }) => (
   <button
     onClick={onClick}
     style={{
-      position: "fixed",
-      top: "32px",
-      right: "240px", // Adjust to position left of profile button
       background: "none",
       border: "none",
       borderRadius: "50%",
@@ -20,9 +17,7 @@ const NotificationIcon: React.FC<NotificationIcon> = ({ onClick }) => (
       alignItems: "center",
       justifyContent: "center",
       cursor: "pointer",
-      zIndex: 999,
-      boxShadow: "none", // No glow
-     
+      boxShadow: "none",
     }}
   >
     {/* Simple notification bell icon SVG */}

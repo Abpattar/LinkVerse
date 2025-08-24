@@ -8,9 +8,6 @@ const MessageIcon: React.FC<MessageIcon> = ({ onClick }) => (
   <button
     onClick={onClick}
     style={{
-      position: "fixed",
-      top: "32px",
-      right: "400px", // Adjust to position left of notification button
       background: "none",
       border: "none",
       borderRadius: "50%",
@@ -20,9 +17,7 @@ const MessageIcon: React.FC<MessageIcon> = ({ onClick }) => (
       alignItems: "center",
       justifyContent: "center",
       cursor: "pointer",
-      zIndex: 999,
-      boxShadow: "none", // No glow
-      
+      boxShadow: "none",
     }}
   >
     {/* Simple envelope/message icon SVG */}

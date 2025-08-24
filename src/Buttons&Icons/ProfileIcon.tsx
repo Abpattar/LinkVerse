@@ -8,9 +8,6 @@ const ProfileIcon: React.FC<ProfileIcon> = ({ onClick }) => (
   <button
     onClick={onClick}
     style={{
-      position: "fixed",
-      top: "32px",
-      right: "80px",
       background: "none",
       border: "none",
       borderRadius: "50%",
@@ -20,8 +17,7 @@ const ProfileIcon: React.FC<ProfileIcon> = ({ onClick }) => (
       alignItems: "center",
       justifyContent: "center",
       cursor: "pointer",
-      zIndex: 999,
-      boxShadow: ``
+      boxShadow: "none",
     }}
   >
     <svg width="60" height="60" viewBox="0 0 100 100">

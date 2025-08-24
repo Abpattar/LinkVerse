@@ -1,8 +1,6 @@
 // import Background from "./background";
 import PrimarySix from "./Structures/PrimarySix";
-import ProfileIcon from "./Buttons&Icons/ProfileIcon";
-import NotificationIcon from "./Buttons&Icons/NotificationIcon";
-import MessageIcon from "./Buttons&Icons/MessegeIcon";
+import TopIcons from "./Structures/TopIcons";
 import SearchBar from "./Structures/SearchBar";
 
 function App() {
@@ -17,9 +15,7 @@ function App() {
     <div style={style}>
       {/* <Background /> */}
       <PrimarySix />
-      <ProfileIcon />
-      <NotificationIcon />
-      <MessageIcon />
+      <TopIcons />
       <SearchBar />
     </div>
   );
