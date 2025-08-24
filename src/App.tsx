@@ -1,5 +1,8 @@
 // import Background from "./background";
 import PrimarySix from "./Structures/PrimarySix";
+import ProfileIcon from "./Buttons&Icons/ProfileIcon";
+import NotificationIcon from "./Buttons&Icons/NotificationIcon";
+
 
 function App() {
   const style = {
@@ -13,6 +16,9 @@ function App() {
     <div style={style}>
       {/* <Background /> */}
       <PrimarySix />
+      <ProfileIcon />
+      <NotificationIcon />
+      
     </div>
   );
 }
