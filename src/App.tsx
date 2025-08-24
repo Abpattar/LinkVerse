@@ -3,6 +3,7 @@ import PrimarySix from "./Structures/PrimarySix";
 import ProfileIcon from "./Buttons&Icons/ProfileIcon";
 import NotificationIcon from "./Buttons&Icons/NotificationIcon";
 import MessageIcon from "./Buttons&Icons/MessegeIcon";
+import SearchBar from "./Structures/SearchBar";
 
 function App() {
   const style = {
@@ -19,6 +20,7 @@ function App() {
       <ProfileIcon />
       <NotificationIcon />
       <MessageIcon />
+      <SearchBar />
     </div>
   );
 }
