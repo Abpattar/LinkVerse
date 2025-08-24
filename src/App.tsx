@@ -2,7 +2,7 @@
 import PrimarySix from "./Structures/PrimarySix";
 import ProfileIcon from "./Buttons&Icons/ProfileIcon";
 import NotificationIcon from "./Buttons&Icons/NotificationIcon";
-
+import MessageIcon from "./Buttons&Icons/MessegeIcon";
 
 function App() {
   const style = {
@@ -18,7 +18,7 @@ function App() {
       <PrimarySix />
       <ProfileIcon />
       <NotificationIcon />
-      
+      <MessageIcon />
     </div>
   );
 }

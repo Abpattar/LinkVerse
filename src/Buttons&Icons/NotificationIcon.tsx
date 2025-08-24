@@ -14,8 +14,8 @@ const NotificationIcon: React.FC<NotificationIcon> = ({ onClick }) => (
       background: "none",
       border: "none",
       borderRadius: "50%",
-      width: "58px",
-      height: "70px",
+      width: "60px",
+      height: "60px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -27,8 +27,8 @@ const NotificationIcon: React.FC<NotificationIcon> = ({ onClick }) => (
   >
     {/* Simple notification bell icon SVG */}
     <svg
-      width="70"
-      height="70"
+      width="60"
+      height="60"
       viewBox="0 0 24 24"
       fill="none"
       stroke="#000000ff"

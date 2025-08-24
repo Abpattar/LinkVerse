@@ -24,7 +24,7 @@ const ProfileIcon: React.FC<ProfileIcon> = ({ onClick }) => (
       boxShadow: ``
     }}
   >
-    <svg width="70" height="70" viewBox="0 0 100 100">
+    <svg width="60" height="60" viewBox="0 0 100 100">
       <circle cx="50" cy="50" r="45"
         fill="none"
         stroke="url(#profileGlow)"
